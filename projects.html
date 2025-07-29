@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Yagnik Donda</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Yagnik Donda</a>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>🛠️ My Projects</h1>
+  <p>A showcase of my selected work — from personal projects to academic experiments.</p>
+</section>
+
+<!-- Filter Buttons -->
+<section class="project-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="web">Web</button>
+  <button class="filter-btn" data-filter="ai">AI</button>
+  <button class="filter-btn" data-filter="tools">Tools</button>
+</section>
+
+<!-- Project Cards Grid -->
+<section class="projects-grid">
+
+  <div class="project-card" data-category="web">
+    <h2>Expense Tracker Web App</h2>
+    <p>A responsive budget tracker with category limits and undo/redo, built with HTML/CSS/JS.</p>
+    <a href="https://yagnik-j-donda.github.io/expense-tracker-simple/" target="_blank" class="btn">View Live</a>
+  </div>
+
+  <div class="project-card" data-category="ai">
+    <h2>Real-time Object Detection</h2>
+    <p>Built using YOLO + CNN-LSTM to detect multiple objects in real-time.</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+  <div class="project-card" data-category="ai">
+    <h2>Sentiment Analysis with LSTM</h2>
+    <p>Trained on IMDB dataset to classify movie reviews by sentiment.</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+  <div class="project-card" data-category="tools">
+    <h2>AI Chatbot for Mental Health</h2>
+    <p>A mood-based chatbot recommending mental health resources and therapists.</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
+
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Yagnik Donda. All rights reserved.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>
