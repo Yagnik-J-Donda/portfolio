@@ -423,3 +423,102 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* Under Construction Page STARTS */
+
+.construction-page {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.construction-content {
+  width: 100%;
+  max-width: 650px;
+  padding: 50px 35px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.construction-icon {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+.construction-content h1 {
+  margin-bottom: 15px;
+  font-size: 2.3rem;
+}
+
+.construction-content p {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: #666666;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Action buttons */
+.construction-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.construction-actions .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 180px;
+  padding: 12px 22px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Back button */
+.secondary-btn {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.secondary-btn:hover {
+  background-color: #333333;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .construction-page {
+    padding: 40px 16px;
+  }
+
+  .construction-content {
+    padding: 40px 22px;
+  }
+
+  .construction-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .construction-icon {
+    font-size: 3.2rem;
+  }
+
+  .construction-actions {
+    flex-direction: column;
+  }
+
+  .construction-actions .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+/* Under Construction Page ENDS */

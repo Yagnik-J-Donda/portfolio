@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Under Construction | Yagnik Donda</title>
+
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      Yagnik Donda
+    </a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      &#9776;
+    </div>
+
+    <nav>
+      <ul id="nav-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html">About</a>
+        </li>
+
+        <li>
+          <a href="projects.html" class="active">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="construction-page">
+
+    <div class="construction-content">
+
+      <div class="construction-icon">
+        🚧
+      </div>
+
+        <h1>Project Under Construction</h1>
+
+        <p>
+            This project is currently being developed and will be
+            available soon.
+        </p>    
+
+        <div class="construction-actions">
+        <a href="#" class="btn secondary-btn" onclick="goBack(event)">
+            ← Previous Page
+        </a>
+
+        <a href="projects.html" class="btn">
+            View All Projects
+        </a>
+        </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Yagnik Donda. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    function goBack(e) {
+        e.preventDefault();
+
+        if (document.referrer !== "") {
+            history.back();
+        } else {
+            window.location.href = "projects.html";
+        }
+    }
+  </script>
+  <script src="JS/script.js"></script>
+
+</body>
+</html>
