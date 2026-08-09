@@ -27,15 +27,41 @@ document.querySelectorAll("nav a").forEach(link => {
 const form = document.getElementById("contact-form");
 
 if (form) {
-  form.addEventListener("submit", function (event) {
+  form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    alert(
-      "Thank you! Your message has been 'sent' " +
-      "(not really — this is a demo)."
-    );
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formStatus = document.getElementById("form-status");
+    const originalButtonText = submitButton.textContent;
 
-    form.reset();
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    formStatus.className = "form-status";
+    formStatus.textContent = "Sending your message...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      formStatus.className = "form-status success";
+      formStatus.textContent = "Thank you! Your message has been sent successfully.";
+    } catch (error) {
+      formStatus.className = "form-status error";
+      formStatus.textContent = "Sorry, your message could not be sent. Please try again.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
   });
 }
 

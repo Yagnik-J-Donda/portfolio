@@ -25,7 +25,12 @@
   <h2>Contact Me</h2>
   <p>If you'd like to collaborate, have questions, or just want to say hello — drop a message below!</p>
 
-  <form class="contact-form" id="contact-form">
+  <form
+    class="contact-form"
+    id="contact-form"
+    action="https://formspree.io/f/xrpzevzk"
+    method="POST"
+  >
     <label for="name">Name<span>*</span></label>
     <input type="text" id="name" name="name" required placeholder="Your full name" />
 
@@ -36,6 +41,7 @@
     <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
 
     <button type="submit" class="btn">Send Message</button>
+    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
   </form>
 </section>
 
