@@ -557,6 +557,8 @@ footer {
 .resume-toolbar {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
@@ -569,12 +571,69 @@ footer {
   font-weight: 600;
 }
 
+.print-status {
+  flex-basis: 100%;
+  min-height: 1.2em;
+  color: #b42318;
+  font-size: 0.88rem;
+  text-align: right;
+}
+
 .resume-document {
+  width: min(100%, 210mm);
+  min-height: 297mm;
+  margin: 0 auto;
   padding: clamp(2rem, 5vw, 4.5rem);
   background: #ffffff;
   border: 1px solid #e1e5ee;
   border-radius: 14px;
   box-shadow: 0 18px 50px rgba(27, 35, 64, 0.09);
+}
+
+.resume-page-separator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: min(100%, 210mm);
+  margin: 1.6rem auto;
+  color: #7a8294;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.resume-page-separator::before,
+.resume-page-separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #cfd4df;
+}
+
+.resume-continuation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 3px solid #3f51b5;
+}
+
+.resume-continuation-header h2 {
+  font-size: 1.45rem;
+}
+
+.resume-continuation-header > p {
+  color: #687083;
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.resume-heading-note {
+  color: #7a8294;
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
 }
 
 .resume-header {
@@ -707,6 +766,12 @@ footer {
   margin-top: 0.5rem;
 }
 
+.resume-education-entry {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e5ee;
+}
+
 @media (max-width: 700px) {
   .resume-page {
     width: min(100% - 1rem, 980px);
@@ -716,6 +781,11 @@ footer {
   .resume-toolbar {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .print-status {
+    grid-column: 1 / -1;
+    text-align: left;
   }
 
   .resume-toolbar .btn {
@@ -728,6 +798,7 @@ footer {
   }
 
   .resume-document {
+    min-height: 0;
     padding: 1.5rem 1.2rem;
     border-radius: 10px;
   }
@@ -741,6 +812,15 @@ footer {
   }
 
   .resume-role-meta {
+    margin-top: 0.35rem;
+    text-align: left;
+  }
+
+  .resume-continuation-header {
+    display: block;
+  }
+
+  .resume-continuation-header > p {
     margin-top: 0.35rem;
     text-align: left;
   }
@@ -760,6 +840,7 @@ footer {
 
   .resume-body .navbar,
   .resume-toolbar,
+  .resume-page-separator,
   .resume-body > footer {
     display: none;
   }
@@ -770,10 +851,16 @@ footer {
   }
 
   .resume-document {
+    width: 100%;
+    min-height: 0;
     padding: 0;
     border: 0;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  #resume-page-two {
+    break-before: page;
   }
 
   .resume-header h1 {

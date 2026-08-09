@@ -36,12 +36,13 @@
 <main class="resume-page">
   <div class="resume-toolbar" aria-label="Resume actions">
     <a href="contact.html" class="btn secondary-btn">Contact Me</a>
-    <button class="btn resume-print-btn" type="button" onclick="window.print()">
+    <button class="btn resume-print-btn" id="print-resume" type="button">
       Print / Save as PDF
     </button>
+    <p class="print-status" id="print-status" role="status" aria-live="polite"></p>
   </div>
 
-  <article class="resume-document">
+  <article class="resume-document resume-sheet">
     <header class="resume-header">
       <p class="resume-eyebrow">Data Analyst</p>
       <h1>Yagnik Donda</h1>
@@ -127,6 +128,25 @@
         </ul>
       </article>
 
+    </section>
+  </article>
+
+  <div class="resume-page-separator" aria-hidden="true">
+    <span>Page 2 of 2</span>
+  </div>
+
+  <article class="resume-document resume-sheet" id="resume-page-two">
+    <header class="resume-continuation-header">
+      <div>
+        <p class="resume-eyebrow">Yagnik Donda</p>
+        <h2>Data Analyst Resume</h2>
+      </div>
+      <p>Professional experience and education</p>
+    </header>
+
+    <section class="resume-section">
+      <h2>Professional Experience <span class="resume-heading-note">Continued</span></h2>
+
       <article class="resume-role">
         <div class="resume-role-heading">
           <div>
@@ -200,6 +220,21 @@
         Academic focus includes applied machine learning, data preparation, analytical programming,
         model development, and communicating technical findings.
       </p>
+
+      <div class="resume-education-entry">
+        <div class="resume-role-heading">
+          <div>
+            <h3>Gujarat Technological University</h3>
+            <p class="resume-role-title">Bachelor of Engineering - Computer Engineering</p>
+          </div>
+          <p class="resume-role-meta">Gujarat, India<br />2017 - 2021</p>
+        </div>
+        <p class="resume-education-note">
+          Built a foundation in programming, database systems, software development,
+          computer networks, algorithms, and structured problem-solving through
+          engineering coursework and practical technical projects.
+        </p>
+      </div>
     </section>
   </article>
 </main>

@@ -106,3 +106,22 @@ if (backButton) {
     }
   });
 }
+
+// Open the browser's native print dialog from the resume page
+const printResumeButton = document.getElementById("print-resume");
+
+if (printResumeButton) {
+  printResumeButton.addEventListener("click", () => {
+    const printStatus = document.getElementById("print-status");
+
+    if (typeof window.print === "function") {
+      window.print();
+      return;
+    }
+
+    if (printStatus) {
+      printStatus.textContent =
+        "Printing is not available in this browser. Open this page in Safari or Chrome.";
+    }
+  });
+}
