@@ -81,9 +81,9 @@ filterButtons.forEach(button => {
     const filter = button.getAttribute("data-filter");
 
     projectCards.forEach(card => {
-      const category = card.getAttribute("data-category");
+      const categories = (card.getAttribute("data-category") || "").split(/\s+/);
 
-      if (filter === "all" || category === filter) {
+      if (filter === "all" || categories.includes(filter)) {
         card.style.display = "flex";
       } else {
         card.style.display = "none";
